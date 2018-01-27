@@ -1,0 +1,55 @@
+{
+	"people": [
+		{
+			"id": 0,
+			"birth": "keresztur",
+			"name": "Boholt Lore",
+			"studwhere": "Orbán Balázs Gimnázium, Székelykeresztúr",
+			"livesin": "Szèkelykeresztur, Harghita, Romania"
+		},
+		{
+			"id": 1,
+			"livesin": "Csikszentdomokos",
+			"other1": "Venczel József Iskolaközpont - Csíkszereda",
+			"birth": "csikszereda",
+			"name": "Nelut Kémenes"
+		},
+		{
+			"marriedto": "Péterfy Eniko",
+			"studwhere": "None",
+			"livesin": "Angyalföld, Budapest, Hungary",
+			"workwhere": "Drogmentes Világért Alapítvány - Magyarország",
+			"name": "Kovács Iulia",
+			"birth": "udvarhely",
+			"id": 2,
+			"workwhat": "helyettes ügyvezető"
+		},
+		{
+			"id": 3,
+			"name": "Monica-Ana Szep",
+			"birth": "barot",
+			"livesin": "Budapest, Hungary"
+		},
+		{
+			"birth": "szentgyorgy",
+			"name": "Matei Szabolcs",
+			"marriedto": "László Tünde",
+			"id": 4
+		},
+		{
+			"name": "Rusz Angella",
+			"studwhere": "Nagy István Művészeti Liceum",
+			"livesin": "Borzont, Harghita, Romania",
+			"workwhere": "Hotel Salvator",
+			"birth": "csikszereda",
+			"studwhat": "Dramaturgy",
+			"id": 5
+		},
+		{
+			"id": 6,
+			"name": "Zsolt Jakab",
+			"birth": "kezdi",
+			"livesin": "Hollywood"
+		}
+	]
+}

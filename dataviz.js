@@ -55,7 +55,7 @@ line(160,0,160,500);
 noStroke();
 
 if(next == false){
-textFont("Impact",40);
+textFont("Arial Black",45);
 text("\t \t Welcome to my first \n data visualization project!", 250,150);
 textFont("Arial",20);
 text("Press any key to continue!",500,250);
@@ -79,7 +79,7 @@ if(count == 1){
 
 
 if(count >= 6){
-  textFont("Impact",40);
+  textFont("Arial Black",45);
   text("Thanks for your attention!", 250,250);
 }
 }
@@ -97,7 +97,7 @@ function Menu(y,t){
       }else{
         fill(76, 144, 255);
       }
-      textFont("Impact",20);
+      textFont("Arial Black",20);
       text("Employment",this.x+10,this.y+25);
 
     }
@@ -107,7 +107,7 @@ function Menu(y,t){
       }else{
         fill(76, 144, 255);
       }
-      textFont("Impact",18);  
+      textFont("Arial Black",18);  
       text("Job",this.x+10,this.y+25);
 
     }
@@ -117,7 +117,7 @@ function Menu(y,t){
       }else{
         fill(76, 144, 255);
       }
-      textFont("Impact",20);
+      textFont("Arial Black",20);
       text("Marriage",this.x+10,this.y+25);
 
     }
@@ -127,7 +127,7 @@ function Menu(y,t){
       }else{
         fill(76, 144, 255);
       }
-     textFont("Impact",20);
+     textFont("Arial Black",20);
      text("Migration",this.x+10,this.y+25);
 
     }
@@ -137,7 +137,7 @@ function Menu(y,t){
       }else{
         fill(76, 144, 255);
       }
-      textFont("Impact",18);
+      textFont("Arial Black",18);
       text("Moved",this.x+10,this.y+25);
       fill(76, 144, 255);
     }
@@ -172,7 +172,7 @@ rect(161,250,this.w2,100);
 fill(76, 144, 255);
 
 fill(255);
-textFont("Impact",40);
+textFont("Arial Black",40);
 text(this.percent1+"%",170,115);
 text(this.percent2+"%",170,315);
 
@@ -180,7 +180,7 @@ fill(76, 144, 255);
 rect(175,468,30,30);
 
 fill(255);
-textFont("Impact",20);
+textFont("Arial Black",20);
 switch(this.point){
 case 1: text("Employed",210,490);
 break;
@@ -194,7 +194,7 @@ rect(410,468,30,30);
  
 
 fill(255);
-textFont("Impact",20);
+textFont("Arial Black",20);
 switch(this.point){
 case 1: text("Unemployed",445,490);
 break;
@@ -239,7 +239,7 @@ rect(this.x+600,500,150,-this.h4);
 fill(76, 144, 255);
 
 fill(255);
-textFont("Impact",40);
+textFont("Arial Black",40);
 text(this.percent1+"%",this.x+30,500-this.h);
 text(this.percent2+"%",this.x+230,500-this.h2);
 text(this.percent3+"%",this.x+430,500-this.h3);
