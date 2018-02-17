@@ -77,9 +77,9 @@ noStroke();
 
 if(next == false){
 textFont("Impact",50);
-text("\t \t Welcome to my first \n data visualization project!", 330,150);
+text("\t \t \t \t \t Üdvözöllek az első \n adatvizualizációs projektemen!", 250,150);
 textFont("Arial",20);
-text("Press any key to continue!",500,250);
+text("Nyomj egy gombot a folytatáshoz!",450,250);
 }
 if(count == 1){
     graph = new Graph(work,count);
@@ -100,7 +100,7 @@ if(count == 1){
 
 if(count >= 5){
   textFont("Impact",50);
-  text("Thanks for your attention!", 330,250);
+  text("Köszönöm a figyelmet!", 330,250);
 }
 }
 
@@ -119,7 +119,7 @@ function Menu(y,t){
       }
       
       textFont("Impact",25);
-      text("Employment",this.x+10,this.y+25);
+      text("Munka",this.x+10,this.y+25);
 
     }
     if(this.txt == 2){
@@ -129,7 +129,7 @@ function Menu(y,t){
         fill(76, 144, 255);
       }
       textFont("Impact",20);  
-      text("Job",this.x+10,this.y+25);
+      text("Szakterület",this.x+10,this.y+25);
 
     }
     if(this.txt == 3){
@@ -139,7 +139,7 @@ function Menu(y,t){
         fill(76, 144, 255);
       }
       textFont("Impact",25);
-      text("Marriage",this.x+10,this.y+25);
+      text("Házasság",this.x+10,this.y+27);
 
     }
     if(this.txt == 4){
@@ -149,7 +149,7 @@ function Menu(y,t){
         fill(76, 144, 255);
       }
      textFont("Impact",25);
-     text("Migration",this.x+10,this.y+25);
+     text("Migráció",this.x+10,this.y+30);
       fill(76, 144, 255);
     }
 
@@ -194,11 +194,11 @@ rect(175,468,30,30);
 fill(255);
 textFont("Impact",20);
 switch(this.point){
-case 1: text("Employed",210,490);
+case 1: text("Alkalmazott",210,490);
 break;
-case 3: text("Married",210,490);
+case 3: text("Házas",210,490);
 break;
-case 4: text("Moved",210,490);
+case 4: text("Költözött",210,490);
 break;
 }
 fill(247, 86, 12); 
@@ -208,11 +208,11 @@ rect(410,468,30,30);
 fill(255);
 textFont("Impact",20);
 switch(this.point){
-case 1: text("Unemployed",445,490);
+case 1: text("Munkanélküli",445,490);
 break;
-case 3: text("Unmarried",445,490);
+case 3: text("Nem házas",445,490);
 break;
-case 4:text("Stayed",445,490);
+case 4:text("Maradt",445,490);
 break;
 }
 
