@@ -77,9 +77,9 @@ noStroke();
 
 if(next == false){
 textFont("Impact",50);
-text("\t \t \t \t \t Bine ai venit la primul  \n meu proiect de vizualizarea datelor!", 220,150);
+text("\t \t Welcome to my first \n data visualization project!", 330,150);
 textFont("Arial",20);
-text("Apasă orice buton pentru a continua!",430,250);
+text("Press any key to continue!",500,250);
 }
 if(count == 1){
     graph = new Graph(work,count);
@@ -100,7 +100,7 @@ if(count == 1){
 
 if(count >= 5){
   textFont("Impact",50);
-  text("Mulțumesc pentru atenția acordată!", 220,250);
+  text("Thanks for your attention!", 330,250);
 }
 }
 
@@ -119,7 +119,7 @@ function Menu(y,t){
       }
       
       textFont("Impact",25);
-      text("Angajare",this.x+10,this.y+25);
+      text("Employment",this.x+10,this.y+25);
 
     }
     if(this.txt == 2){
@@ -129,7 +129,7 @@ function Menu(y,t){
         fill(76, 144, 255);
       }
       textFont("Impact",20);  
-      text("Specializare",this.x+10,this.y+25);
+      text("Professional field",this.x+10,this.y+25);
 
     }
     if(this.txt == 3){
@@ -139,7 +139,7 @@ function Menu(y,t){
         fill(76, 144, 255);
       }
       textFont("Impact",25);
-      text("Căsătorie",this.x+10,this.y+30);
+      text("Marriage",this.x+10,this.y+25);
 
     }
     if(this.txt == 4){
@@ -149,7 +149,7 @@ function Menu(y,t){
         fill(76, 144, 255);
       }
      textFont("Impact",25);
-     text("Domiciliu",this.x+10,this.y+30);
+     text("Migration",this.x+10,this.y+25);
       fill(76, 144, 255);
     }
 
@@ -194,11 +194,11 @@ rect(175,468,30,30);
 fill(255);
 textFont("Impact",20);
 switch(this.point){
-case 1: text("Angajat",210,490);
+case 1: text("Employed",210,490);
 break;
-case 3: text("Căsătorit",210,490);
+case 3: text("Married",210,490);
 break;
-case 4: text("Au plecat",210,490);
+case 4: text("Moved",210,490);
 break;
 }
 fill(247, 86, 12); 
@@ -208,11 +208,11 @@ rect(410,468,30,30);
 fill(255);
 textFont("Impact",20);
 switch(this.point){
-case 1: text("Șomer",445,490);
+case 1: text("Unemployed",445,490);
 break;
-case 3: text("Necăsătorit",445,490);
+case 3: text("Unmarried",445,490);
 break;
-case 4:text("Au rămas",445,490);
+case 4:text("Stayed",445,490);
 break;
 }
 
@@ -263,24 +263,6 @@ text(this.percent2+"%",this.x+177,500-this.h2);
 text(this.percent3+"%",this.x+327,500-this.h3);
 text(this.percent4+"%",this.x+477,500-this.h4);
 text(this.percent5+"%",this.x+627,500-this.h5);
-fill(76, 144, 255);
-
-ellipse(175,15,10,10);
-fill(247, 86, 12);
-ellipse(175,35,10,10);
-fill(255, 242, 0);
-ellipse(175,55,10,10);
-fill(172, 0, 206);
-ellipse(175,75,10,10);
-fill(66, 244, 80);
-ellipse(175,95,10,10);
-fill(255);
-textFont("Impact",20);
-text("Spital",190,20);
-text("Scoala",190,42);
-text("Dreptate",190,62);
-text("I.T.",190,82);
-text("Altceva",190,102);
 fill(76, 144, 255);
  }
 }

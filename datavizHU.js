@@ -149,7 +149,7 @@ function Menu(y,t){
         fill(76, 144, 255);
       }
      textFont("Impact",25);
-     text("Migráció",this.x+10,this.y+30);
+     text("Lakhely",this.x+10,this.y+30);
       fill(76, 144, 255);
     }
 
@@ -263,6 +263,24 @@ text(this.percent2+"%",this.x+177,500-this.h2);
 text(this.percent3+"%",this.x+327,500-this.h3);
 text(this.percent4+"%",this.x+477,500-this.h4);
 text(this.percent5+"%",this.x+627,500-this.h5);
+fill(76, 144, 255);
+
+ellipse(175,15,10,10);
+fill(247, 86, 12);
+ellipse(175,35,10,10);
+fill(255, 242, 0);
+ellipse(175,55,10,10);
+fill(172, 0, 206);
+ellipse(175,75,10,10);
+fill(66, 244, 80);
+ellipse(175,95,10,10);
+fill(255);
+textFont("Impact",20);
+text("Egészségügy",190,20);
+text("Tanügy",190,42);
+text("Jog",190,62);
+text("I.T.",190,82);
+text("Más",190,102);
 fill(76, 144, 255);
  }
 }
