@@ -264,5 +264,23 @@ text(this.percent3+"%",this.x+327,500-this.h3);
 text(this.percent4+"%",this.x+477,500-this.h4);
 text(this.percent5+"%",this.x+627,500-this.h5);
 fill(76, 144, 255);
+
+ellipse(175,15,10,10);
+fill(247, 86, 12);
+ellipse(175,35,10,10);
+fill(255, 242, 0);
+ellipse(175,55,10,10);
+fill(172, 0, 206);
+ellipse(175,75,10,10);
+fill(66, 244, 80);
+ellipse(175,95,10,10);
+fill(255);
+textFont("Impact",20);
+text("Hospital",190,20);
+text("School",190,42);
+text("Law",190,62);
+text("I.T.",190,82);
+text("Other",190,102);
+fill(76, 144, 255);
  }
 }
