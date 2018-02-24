@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1517851534 source:c:\users\matya\desktop\ada\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+
+1518266406 source:c:\users\matya\desktop\sort\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+
