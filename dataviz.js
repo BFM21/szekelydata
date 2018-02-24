@@ -227,20 +227,21 @@ function Graph2(adat1,adat2,adat3,adat4){
   this.dta4 = adat4;
   this.x = 220;
   
-this.percent1 = (this.dta1*100)/workers.length;
-this.percent2 = (this.dta2*100)/workers.length;
-this.percent3 = (this.dta3*100)/workers.length;
-this.percent4 = (this.dta4*100)/workers.length;
+  //9572 workwhat from main JSON
+this.percent1 = (this.dta1*100)/9572;
+this.percent2 = (this.dta2*100)/9572;
+this.percent3 = (this.dta3*100)/9572;
+this.percent4 = (this.dta4*100)/9572;
 this.percent5 = 100-(this.percent1+this.percent2+this.percent3+this.percent4);
 this.h = map(this.percent1,0,100,0,350);
 this.h2 = map(this.percent2,0,100,0,350);
 this.h3 = map(this.percent3,0,100,0,350);
 this.h4 = map(this.percent4,0,100,0,350);
 this.h5 = map(this.percent5,0,100,0,350);
-this.percent1 = round((this.dta1*100)/workers.length);
-this.percent2 = round((this.dta2*100)/workers.length);
-this.percent3 = round((this.dta3*100)/workers.length);
-this.percent4 = round((this.dta4*100)/workers.length);
+this.percent1 = round((this.dta1*100)/9572);
+this.percent2 = round((this.dta2*100)/9572);
+this.percent3 = round((this.dta3*100)/9572);
+this.percent4 = round((this.dta4*100)/9572);
 this.percent5 = round(100-(this.percent1+this.percent2+this.percent3+this.percent4));
   
  this.show = function(){
