@@ -1,3 +1,7 @@
+var info;
+var info2;
+var infoHover = false;
+var infoLink = false;
 var menupoint = [];
 var szam = 1;
 var padding = 1;
@@ -7,6 +11,7 @@ var data;
 var data2;
 var graph;
 var graph2;
+
 
 
 var work = 0;
@@ -24,7 +29,8 @@ function preload(){
 }
 
 function setup() {
-
+info = loadImage("images/info.png");
+info2 = loadImage("images/info2.png");
 createCanvas(1000,500);
 
 for(var i = 0; i < 5; i++){
@@ -69,7 +75,11 @@ function draw() {
   for(var i = 0; i < 5; i++){
   menupoint[i].show();
 }
-
+if(infoHover==true){
+  image(info2,1,460,info.width/25,info.height/25);
+}else{
+  image(info,1,460,info.width/25,info.height/25);
+}
 stroke(255);
 strokeWeight(2);
 line(160,0,160,500);
@@ -161,7 +171,9 @@ function keyPressed(){
   next = true;
   count++;
 }
-
+function mouseMoved(){
+ checkInfo(); 
+}
 
 function Graph(adat,num){
  this.dta = adat;
@@ -283,5 +295,22 @@ text("Dreptate",190,62);
 text("I.T.",190,82);
 text("Altceva",190,102);
 fill(76, 144, 255);
+ }
+}
+function checkInfo(){
+  if(mouseX>0 && mouseX < 40 && mouseY > 459 && mouseY < 500){
+    infoHover = true;
+  }
+  else{
+   infoHover = false; 
+  }
+}
+
+function mousePressed(){
+ if(infoHover && infoLink == false){
+   createElement("br");
+   createA("http://csaladenes.egologo.ro/?p=1129","Click here for information!");
+   infoLink = true;
+   
  }
 }
