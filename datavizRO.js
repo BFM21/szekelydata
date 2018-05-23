@@ -11,9 +11,11 @@ var data;
 var data2;
 var graph;
 var graph2;
-
-
-
+var zoom = 5.6;
+var clon = 24.98500000;
+var clat = 45.943161;
+var megyeLon = 24.55747;
+var megyeLat = 46.54245;
 var work = 0;
 var school=0;
 var hospital = 0;
@@ -25,7 +27,9 @@ var married = 0;
 var people;
 function preload(){
   data = loadJSON("data1.json");
-  data2 = loadJSON("data.json");
+  data2 = loadJSON("data.json");  
+  romania = loadImage("https://api.mapbox.com/styles/v1/bfmatyi/cjhd4epv61ndo2rsb7exoktk1/static/"+clon+","+clat+","+zoom+",0,0/840x500?access_token=pk.eyJ1IjoiYmZtYXR5aSIsImEiOiJjamhjZGhyd3gwOTI5MzBteTZnb3A2Z2k0In0.RuwbFf7ptt7KckVGGGEM3A");
+coordinates = loadStrings("magyarcoord.txt");
 }
 
 function setup() {
@@ -76,8 +80,10 @@ function draw() {
   menupoint[i].show();
 }
 if(infoHover==true){
+  imageMode(CORNER);
   image(info2,1,460,info.width/25,info.height/25);
 }else{
+  imageMode(CORNER);
   image(info,1,460,info.width/25,info.height/25);
 }
 stroke(255);
@@ -107,8 +113,11 @@ if(count == 1){
     graph = new Graph(notMoved,count);
     graph.show();
   }
+  if(count == 5){
+     mapviz();
+  }
 
-if(count >= 5){
+if(count >= 6){
   textFont("Impact",50);
   text("Mulțumesc pentru atenția acordată!", 220,250);
 }
@@ -160,6 +169,16 @@ function Menu(y,t){
       }
      textFont("Impact",25);
      text("Domiciliu",this.x+10,this.y+30);
+      fill(76, 144, 255);
+    }
+    if(this.txt == 5){
+     if(next == true && count==5){
+      fill(255);
+      }else{
+        fill(76, 144, 255);
+      }
+     textFont("Impact",25);
+     text("Naștere",this.x+10,this.y+30);
       fill(76, 144, 255);
     }
 
@@ -313,4 +332,54 @@ function mousePressed(){
    infoLink = true;
    
  }
+}
+function posX(lon){
+  var lon = radians(lon);
+  var a = (256 / PI) * pow(2,zoom);
+  var b = lon + PI;
+  return a*b;
+}
+
+function posY(lat){
+  var lat = radians(lat);
+  var a = (256/PI)*pow(2,zoom);
+  var b = tan(PI/4 + lat/2);
+  var c = PI - log(b);
+  return a*c;
+}
+
+  function mapviz(){
+    var imgX = 80;
+    var imgY =0;
+translate(width/2,height/2); 
+   imageMode(CENTER); 
+   image(romania,imgX,imgY);
+  
+   
+   for(var i=0; i<coordinates.length;i++){
+     var coord = coordinates[i].split(/,/);
+     console.log(size);
+     var line = coord[0];
+     var name = coord[1];
+     var lat = coord[2];
+     var lon = coord[3];
+     var size = coord[4]/150;
+    
+   
+   var cx = posX(clon);
+   var cy = posY(clat);
+   
+   var x = posX(lon) - cx;
+   var y = posY(lat) - cy;
+   fill(255-(i*60),255-(i*20),255-(i*50),200);
+   stroke(0);
+   ellipse(x+imgX,y+imgY,size,size);
+   rect(-325,-240+(i*20),8,8);
+   fill(0);
+   stroke(255);
+   textFont("Impact", 10);
+   text(name,-315,-235+(i*20));
+   stroke(0);
+   }
+   
 }
