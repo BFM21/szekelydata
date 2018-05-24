@@ -180,7 +180,7 @@ function Menu(y,t){
         fill(76, 144, 255);
       }
      textFont("Impact",25);
-   text("Születés",this.x+10,this.y+30);
+   text("Születési hely",this.x+10,this.y+30);
       fill(76, 144, 255);
     }
 
@@ -361,10 +361,11 @@ translate(width/2,height/2);
      var coord = coordinates[i].split(/,/);
      console.log(size);
      var line = coord[0];
-     var name = coord[1];
-     var lat = coord[2];
-     var lon = coord[3];
-     var size = coord[4]/150;
+     var magyar = coord[1];
+     var roman = coord[2];
+     var lat = coord[3];
+     var lon = coord[4];
+     var size = coord[5]/150;
     
    
    var cx = posX(clon);
@@ -375,11 +376,11 @@ translate(width/2,height/2);
    fill(255-(i*60),255-(i*20),255-(i*50),200);
    stroke(0);
    ellipse(x+imgX,y+imgY,size,size);
-   rect(-325,-240+(i*20),8,8);
+   rect(-325,-235+(i*20),8,8);
    fill(0);
    stroke(255);
-   textFont("Impact", 10);
-   text(name,-315,-235+(i*20));
+   textFont("Impact", 15);
+   text(magyar,-315,-225+(i*20));
    stroke(0);
    }
    
