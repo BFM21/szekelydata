@@ -15,6 +15,10 @@ var zoom = 5.6;
 var clon = 24.98500000;
 var clat = 45.943161;
 
+var ball = new Array();
+var imgX = 80; 
+var imgY =0
+
 
 var work = 0;
 var school=0;
@@ -36,6 +40,29 @@ function setup() {
 info = loadImage("images/info.png");
 info2 = loadImage("images/info2.png");
 createCanvas(1000,500);
+for(var i = 0; i<coordinates.length; i++){
+  var coord = coordinates[i].split(/,/);
+     console.log(size);
+     var line = coord[0];
+     var magyar = coord[1];
+     var roman = coord[2];
+     var lat = coord[3];
+     var lon = coord[4];
+     var size = coord[5]/150;
+    
+   
+     var cx = posX(clon);
+     var cy = posY(clat);
+   
+     var x = posX(lon) - cx;
+     var y = posY(lat) - cy;
+   
+   var positionX = x+imgX;
+   var positionY = y+imgY;
+   
+   ball[i] = new Balls(positionX,positionY,size,magyar,roman,i);
+}
+
 
 for(var i = 0; i < 5; i++){
   menupoint[i] = new Menu(padding,szam);
@@ -115,6 +142,9 @@ if(count == 1){
   }
   if(count == 5){
      mapviz();
+     for(var i = 0; i<ball.length; i++){
+      ball[i].show();
+    }
   }
 
 if(count >= 6){
@@ -336,10 +366,9 @@ function mousePressed(){
  }
 }
 
-function colors(){
-  var r = random(0,255);
-  v
-}
+
+ 
+
 
 
 function posX(lon){
@@ -357,39 +386,33 @@ function posY(lat){
   return a*c;
 }
 
-     function mapviz(){
-    var imgX = 80;
-    var imgY =0;
+ function mapviz(){
 translate(width/2,height/2); 
    imageMode(CENTER); 
    image(romania,imgX,imgY);
   
-   
-   for(var i=0; i<coordinates.length;i++){
-     var coord = coordinates[i].split(/,/);
-     console.log(size);
-     var line = coord[0];
-     var magyar = coord[1];
-     var roman = coord[2];
-     var lat = coord[3];
-     var lon = coord[4];
-     var size = coord[5]/150;
+ }
+
+
+function Balls(x,y,s,txt1,txt2,num){
+  this.x = x;
+  this.y = y;
+  this.size = s;
+  this.r = random(0,255);
+  this.g = random(0,255);
+  this.b = random(0,255);
+  
+  this.show = function(){  
+     fill(this.r,this.g,this.b);
+     stroke(0);
+     ellipse(this.x,this.y,this.size,this.size);
+     rect(-325,-235+(num*20),8,8);
+     fill(0);
+     stroke(255);
+     textFont("Impact", 15);
+     text(txt1+"/"+txt2,-315,-225+(num*20));
+     stroke(0);
     
-   
-   var cx = posX(clon);
-   var cy = posY(clat);
-   
-   var x = posX(lon) - cx;
-   var y = posY(lat) - cy;
-   fill(255-(i*60),255-(i*20),255-(i*50),200);
-   stroke(0);
-   ellipse(x+imgX,y+imgY,size,size);
-   rect(-325,-235+(i*20),8,8);
-   fill(0);
-   stroke(255);
-   textFont("Impact", 15);
-   text(magyar+"/"+roman,-315,-225+(i*20));
-   stroke(0);
-   }
-   
+  }
+  
 }
