@@ -1,1 +1,1 @@
-My first ever data visualisation project made in Processing.
+My first ever data visualization project made in Processing.
